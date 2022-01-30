@@ -1,2 +1,2 @@
 # eclectic-carnival
-An Express.js &amp; MongoDB back end for a social network.
+An Express.js &amp; Mongoose back end for a social network.
