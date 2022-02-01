@@ -1,18 +1,14 @@
-const { Schema, Types } = require('mongoose');
+const { Schema, model } = require('mongoose');
 const { DateTime } = require('luxon');
 
+// will match work?
 const validateEmail = (email) => {
-  var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-  return re.test(email)
+  return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(email);
 };
 
 // Schema to create Student model
 const userSchema = new Schema(
   {
-    _id: {
-      type: Schema.Types.ObjectId,
-      default: () => new Types.ObjectId(),
-    },
     username: {
       type: String,
       unique: true,
