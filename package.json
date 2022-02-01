@@ -1,21 +1,21 @@
 {
-  "name": "eclectic-carnival",
-  "version": "0.0.1",
-  "description": "Express.js & Mongoose back end for a social network",
-  "main": "index.js",
-  "license": "MIT",
-  "scripts": {
-    "start": "node index",
-    "dev": "nodemon index",
-    "seed": "node utils/seed",
-    "heroku-postbuild": "node utils/seed.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1",
-    "luxon": "^2.3.0",
-    "mongoose": "^6.0.13"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.9"
-  }
+    "name": "eclectic-carnival",
+    "version": "0.0.1",
+    "description": "Express.js & Mongoose back end for a social network",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "node index",
+        "dev": "nodemon index",
+        "seed": "node utils/seed",
+        "heroku-postbuild": "node utils/seed.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "luxon": "^2.3.0",
+        "mongoose": "^6.0.13"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.9"
+    }
 }
