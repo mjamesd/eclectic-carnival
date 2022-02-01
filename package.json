@@ -1,5 +1,5 @@
 {
-  "name": "Eclectic Carnival",
+  "name": "eclectic-carnival",
   "version": "0.0.1",
   "description": "Express.js & Mongoose back end for a social network",
   "main": "index.js",
