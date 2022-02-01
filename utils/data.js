@@ -1,118 +1,98 @@
-const names = [
-  'Aaran',
-  'Aaren',
-  'Aarez',
-  'Aarman',
-  'Aaron',
-  'Aaron-James',
-  'Aarron',
-  'Aaryan',
-  'Aaryn',
-  'Aayan',
-  'Aazaan',
-  'Abaan',
-  'Abbas',
-  'Abdallah',
-  'Abdalroof',
-  'Abdihakim',
-  'Abdirahman',
-  'Abdisalam',
-  'Abdul',
-  'Abdul-Aziz',
-  'Abdulbasir',
-  'Abdulkadir',
-  'Abdulkarem',
-  'Smith',
-  'Jones',
-  'Coollastname',
-  'enter_name_here',
-  'Ze',
-  'Zechariah',
-  'Zeek',
-  'Zeeshan',
-  'Zeid',
-  'Zein',
-  'Zen',
-  'Zendel',
-  'Zenith',
-  'Zennon',
-  'Zeph',
-  'Zerah',
-  'Zhen',
-  'Zhi',
-  'Zhong',
-  'Zhuo',
-  'Zi',
-  'Zidane',
-  'Zijie',
-  'Zinedine',
-  'Zion',
-  'Zishan',
-  'Ziya',
-  'Ziyaan',
-  'Zohaib',
-  'Zohair',
-  'Zoubaeir',
-  'Zubair',
-  'Zubayr',
-  'Zuriel',
-  'Xander',
-  'Jared',
-  'Courtney',
-  'Gillian',
-  'Clark',
-  'Jared',
-  'Grace',
-  'Kelsey',
-  'Tamar',
-  'Alex',
-  'Mark',
-  'Tamar',
-  'Farish',
-  'Sarah',
-  'Nathaniel',
-  'Parker',
+// USERS ====================================================
+const users = [
+  {
+    username: `mark`,
+    email: `mark@example.com`,
+  },
+  {
+    username: `hilary`,
+    email: `hilary@example.org`,
+  },
+  {
+    username: `leon`,
+    email: `leon@example.net`,
+  },
 ];
 
-const appDescriptions = [
-  'Decision Tracker',
-  'Find My Phone',
-  'Learn Piano',
-  'Starbase Defender',
-  'Tower Defense',
-  'Monopoly Money Manager',
-  'Movie trailers',
-  'Hello world',
-  'Stupid Social Media App',
-  'Notes',
-  'Messages',
-  'Email',
-  'Compass',
-  'Firefox',
-  'Running app',
-  'Cooking app',
-  'Poker',
-  'Deliveries',
+// THOUGHTS ====================================================
+const thoughts = [
+  {
+    thoughtText: "Stargate is soooooo cooooool.",
+    username: "mark",
+    reactions: [
+      {
+        reactionBody: "You watch too much!",
+        username: "hilary"
+      },
+      {
+        reactionBody: "I want to watch with you, dad!",
+        username: "leon"
+      },
+    ],
+  },
+  {
+    thoughtText: "My favorite sandwich is a reuben.",
+    username: "mark",
+    reactions: [
+      {
+        reactionBody: "I want your food!",
+        username: "leon"
+      },
+    ],
+  },
+  {
+    thoughtText: "Buffy is soooooo cooooool.",
+    username: "hilary",
+    reactions: [
+      {
+        reactionBody: "We need more content!",
+        username: "mark"
+      },
+      {
+        reactionBody: "I want to watch with you, mommy!",
+        username: "leon"
+      },
+    ],
+  },
+  {
+    thoughtText: "My favorite sandwich is a club.",
+    username: "hilary",
+    reactions: [
+      {
+        reactionBody: "psh, typical",
+        username: "mark"
+      },
+    ],
+  },
+  {
+    thoughtText: "Twinkle Twinkle Little Star is soooooo cooooool.",
+    username: "leon",
+    reactions: [
+      {
+        reactionBody: "I love you! ♥ ♥ ♥",
+        username: "hilary"
+      },
+      {
+        reactionBody: "I love you! <3 <3 <3",
+        username: "mark"
+      },
+    ],
+  },
+  {
+    thoughtText: "My favorite sandwich is sunbutter and jelly.",
+    username: "leon",
+    reactions: [
+      {
+        reactionBody: "It's so yummy!",
+        username: "leon"
+      },
+      {
+        reactionBody: "I ate the other half.",
+        username: "mark"
+      },
+    ],
+  },
 ];
 
-// Get a random item given an array
-const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
-
-// Gets a random full name
-const getRandomName = () =>
-  `${getRandomArrItem(names)} ${getRandomArrItem(names)}`;
-
-// Function to generate random assignments that we can add to student object.
-const getRandomAssignments = (int) => {
-  const results = [];
-  for (let i = 0; i < int; i++) {
-    results.push({
-      assignmentName: getRandomArrItem(appDescriptions),
-      score: Math.floor(Math.random() * (99 - 70 + 1) + 70),
-    });
-  }
-  return results;
-};
-
-// Export the functions for use in seed.js
-module.exports = { getRandomName, getRandomAssignments };
+// Export the functions for use in seed.js =====================
+module.exports = { users, thoughts };
