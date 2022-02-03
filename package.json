@@ -1,9 +1,9 @@
 {
     "name": "eclectic-carnival",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "Express.js & Mongoose back end for a social network",
     "main": "index.js",
-    "license": "MIT",
+    "license": "GNU GPLv3",
     "scripts": {
         "start": "node index",
         "dev": "nodemon index",
