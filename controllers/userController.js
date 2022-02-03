@@ -44,7 +44,7 @@ const updateUser = async (req, res) => {
             { $set: req.body },
             { runValidators: true, new: true }
         );
-        if (user) res.json(user);
+        if (updUser) res.json(updUser);
         else res.status(404).json({ message: 'No user with this id!' })
     } catch (err) {
         res.status(500).json(err);
