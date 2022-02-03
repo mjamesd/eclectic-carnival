@@ -2,9 +2,9 @@ const { Schema, model } = require('mongoose');
 const { DateTime } = require('luxon');
 
 // will match work?
-const validateEmail = (email) => {
-    return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(email);
-};
+// const validateEmail = (email) => {
+//     return /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(email);
+// };
 
 // Schema to create Student model
 const userSchema = new Schema(
@@ -30,11 +30,11 @@ const userSchema = new Schema(
         },
         friends: [{
             type: Schema.Types.ObjectId,
-            ref: 'User'
+            ref: 'User',
         }],
         thoughts: [{
             type: Schema.Types.ObjectId,
-            ref: 'Thought'
+            ref: 'Thought',
         }],
     },
     {
@@ -42,15 +42,17 @@ const userSchema = new Schema(
             getters: true,
             virtuals: true,
         },
+        id: false,
     }
 );
 
 userSchema
     .virtual('friendCount')
-    .get(() => {
+    .get(function () {
         return this.friends.length;
     });
 
-const User = model('user', userSchema);
+
+const User = model('User', userSchema);
 
 module.exports = User;
