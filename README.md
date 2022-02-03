@@ -37,8 +37,9 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 1. [Description](#description)
 2. [Installation](#installation)
 3. [Usage](#usage)
-4. [License](#license)
-5. [Questions](#questions)
+4. [Demonstration](#demonstration)
+5. [License](#license)
+6. [Questions](#questions)
 
 ## Installation
 
@@ -51,6 +52,12 @@ Lastly, you may seed the database by running the command `npm run seed`. If you 
 ## Usage
 
 Open a terminal, navigate to the directory containing the `index.js` file, then run `npm run start` to start the app.
+
+## Demonstration
+
+View these two videos for a demonstration of the API functionality:
+ * [Part 1](https://watch.screencastify.com/v/GvSP7E095Bp1DxqrD52v)
+ * [Part 2](https://watch.screencastify.com/v/GvSP7E095Bp1DxqrD52v)
 
 ## License
 
