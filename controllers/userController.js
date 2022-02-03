@@ -57,7 +57,7 @@ const deleteUser = async (req, res) => {
         const delUser = await User.findOneAndRemove({ _id: req.params.userId });
         if (delUser) {
             try {
-                const delThoughts = await Thought.deleteMany({ username: req.params.username });
+                const delThoughts = await Thought.deleteMany({ username: delUser.username });
                 console.log(delThoughts);
                 if (delThoughts.deletedCount > 0) res.json({ message: 'User & all their thoughts successfully deleted' });
                 else res.json({ message: 'User deleted, but no thoughts found' })
